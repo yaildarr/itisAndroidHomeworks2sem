@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ItisAndroidHomework</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="getRandomCat">Получить рандомную кошку</string>
+    <string name="Get">Получить</string>
+    <string name="enter_id">Введите id кота</string>
+    <string name="CatService">Кошкосервис</string>
+    <string name="error_network">Нет подключения к интернету</string>
+    <string name="error_unknown">Произошла неизвестная ошибка</string>
+    <string name="cat_image">cat image</string>
+    <string name="loading">Загрузка котов...</string>
+    <string name="cat">Кот</string>
+    <string name="getCatById">Получить кошку по породе</string>
+</resources>

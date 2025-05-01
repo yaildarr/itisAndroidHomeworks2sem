@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/catService"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/CatService"
+
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        />
+
+
+    <TextView
+        android:id="@+id/getCatText"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+
+        android:text="@string/getRandomCat"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/catService" />
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/buttonRandomCat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/Get"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/getCatText" />
+
+    <TextView
+        android:id="@+id/getCatByIdText"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+
+        android:text="@string/getCatById"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/buttonRandomCat" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputIdCat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:endIconMode="clear_text"
+        app:boxBackgroundMode="outline"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/getCatByIdText"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guideline3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:id="@+id/buttonCatId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/Get"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/textInputIdCat" />
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

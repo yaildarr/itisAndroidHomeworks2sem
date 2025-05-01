@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/catService"
+        style="@style/MaterialAlertDialog.Material3.Body.Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/CatService"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        android:textSize="24sp"
+        />
+
+    <View
+        android:id="@+id/shimmerImageView"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:background="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/catService" />
+
+    <View
+        android:id="@+id/shimmerTextView"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#E0E0E0"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/shimmerImageView"
+        />
+
+    <ImageView
+        android:id="@+id/catImageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Кот"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/catService" />
+
+    <TextView
+        android:id="@+id/catIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/catImageView"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
