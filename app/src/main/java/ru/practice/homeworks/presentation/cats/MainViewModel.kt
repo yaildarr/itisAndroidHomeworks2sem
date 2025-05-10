@@ -18,6 +18,7 @@ import ru.practice.homeworks.R
 import ru.practice.homeworks.domain.model.CatDataModel
 import ru.practice.homeworks.domain.usecase.CatByIdUseCase
 import ru.practice.homeworks.domain.usecase.RandomCatUseCase
+import ru.practice.homeworks.domain.wrapper.CatWrapper
 
 import java.io.IOException
 import javax.inject.Inject
@@ -31,8 +32,8 @@ class MainViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<UiState<CatDataModel>>(UiState.Loading)
     val uiState: StateFlow<UiState<CatDataModel>> = _uiState
 
-    private val _uiStateId = MutableStateFlow<UiState<CatDataModel>>(UiState.Loading)
-    val uiStateId: StateFlow<UiState<CatDataModel>> = _uiStateId
+    private val _uiStateId = MutableStateFlow<UiState<CatWrapper>>(UiState.Loading)
+    val uiStateId: StateFlow<UiState<CatWrapper>> = _uiStateId
 
     fun loadRandomCat(){
         viewModelScope.launch {
