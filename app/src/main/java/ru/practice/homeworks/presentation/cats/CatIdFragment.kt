@@ -1,5 +1,6 @@
 package ru.practice.homeworks.presentation.cats
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -17,6 +18,8 @@ import kotlinx.coroutines.launch
 import ru.practice.homeworks.R
 import ru.practice.homeworks.databinding.FragmentCatBinding
 import ru.practice.homeworks.domain.model.CatDataModel
+import ru.practice.homeworks.domain.wrapper.CatWrapper
+import ru.practice.homeworks.domain.wrapper.DataSource
 
 @AndroidEntryPoint
 class CatIdFragment : Fragment(R.layout.fragment_cat_id) {
@@ -36,12 +39,20 @@ class CatIdFragment : Fragment(R.layout.fragment_cat_id) {
             viewModel.uiStateId.collectLatest { state ->
                 when (state) {
                     is UiState.Loading -> showLoading()
-                    is UiState.Success -> showData(state.data)
+                    is UiState.Success -> {
+                        showData(state.data.catDataModel)
+                        showToast(requireContext(),state.data.source)
+                    }
                     is UiState.Error -> showError(state.message)
                 }
             }
         }
         viewModel.loadListCatById(catId)
+    }
+
+    private fun showToast(context: Context, source: DataSource){
+        val toast = Toast.makeText(context,source.name, Toast.LENGTH_SHORT)
+        toast.show()
     }
 
     private fun showLoading(){
@@ -69,6 +80,8 @@ class CatIdFragment : Fragment(R.layout.fragment_cat_id) {
             text = "ID кота: ${cat.id}"
             visibility = View.VISIBLE
         }
+
+
     }
 
     private fun showError(message: String) {
@@ -96,12 +109,6 @@ class CatIdFragment : Fragment(R.layout.fragment_cat_id) {
     }
 
     companion object {
-        fun newInstance(catId: String): CatIdFragment {
-            return CatIdFragment().apply {
-                arguments = Bundle().apply {
-                    putString("cat_id", catId)
-                }
-            }
-        }
+        const val catId = "cat_id"
     }
 }
