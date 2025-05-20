@@ -4,6 +4,8 @@ package ru.practice.homeworks.presentation.cats
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import dev.androidbroadcast.vbpd.viewBinding
 import ru.practice.homeworks.MainActivity
@@ -22,19 +24,16 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     private fun initViews(){
         viewBinding.buttonRandomCat.setOnClickListener {
-            (requireActivity() as? MainActivity)?.navigate(
-                destination = CatFragment(),
-                action = NavigationAction.REPLACE,
-                isAddToBackStack = true
-            )
+            findNavController().navigate(R.id.action_mainFragment_to_catFragment)
         }
         viewBinding.buttonCatId.setOnClickListener {
-            val catIdFragment = CatIdFragment.newInstance(viewBinding.textInputIdCat.editText?.text.toString())
 
-            (requireActivity() as? MainActivity)?.navigate(
-                destination = catIdFragment,
-                action = NavigationAction.REPLACE,
-                isAddToBackStack = true
+
+            val id = viewBinding.textInputIdCat.editText?.text.toString()
+
+            findNavController().navigate(
+                R.id.action_mainFragment_to_catIdFragment,
+                bundleOf(CatIdFragment.catId to id)
             )
         }
     }
