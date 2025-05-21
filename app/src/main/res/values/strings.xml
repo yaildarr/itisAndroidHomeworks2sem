@@ -11,4 +11,14 @@
     <string name="loading">Загрузка котов...</string>
     <string name="cat">Кот</string>
     <string name="getCatById">Получить кошку по породе</string>
+    <string name="retry">Retry</string>
+    <string name="currency_code">Currency Code</string>
+    <string name="amount">Amount</string>
+    <string name="convert">Convert</string>
+    <string name="result">Result</string>
+    <string name="currency_converter">Currency converter</string>
+    <string name="from">From</string>
+    <string name="count_points">Введите количество точек</string>
+    <string name="cherez_zap">Введите значения через запятую</string>
+    <string name="draw_graph">Отрисовать график</string>
 </resources>

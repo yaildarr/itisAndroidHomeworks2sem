@@ -5,8 +5,9 @@ import okhttp3.Response
 import javax.inject.Inject
 
 
-class AuthInterceptor @Inject constructor() : Interceptor{
+class CatAuthInterceptor @Inject constructor() : Interceptor{
     private val apiKey = "live_MTM1GWF1QezSA2TDOktJqkfjVNTTldqTk68jE1b2als4LnnpJbK0M1WIqWULS2wF"
+
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()

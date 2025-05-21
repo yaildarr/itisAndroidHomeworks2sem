@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -30,6 +31,7 @@ android {
     }
     buildFeatures{
         viewBinding = true
+        compose = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -37,6 +39,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    composeCompiler {
+        reportsDestination = layout.buildDirectory.dir("compose_compiler")
+        metricsDestination = layout.buildDirectory.dir("compose_compiler")
     }
 }
 
@@ -66,5 +72,32 @@ dependencies {
     implementation(libs.glide)
 
     implementation(libs.viewbinding.property.delegate)
+
+
+    val composeBom = platform("androidx.compose:compose-bom:2025.05.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+    implementation("androidx.compose.material3:material3")
+
+    implementation("androidx.compose.ui:ui")
+
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+
+    implementation("androidx.compose.material:material-icons-core")
+
+    // Optional - Integration with activities
+    implementation("androidx.activity:activity-compose:1.10.1")
+    // Optional - Integration with ViewModels
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.5")
+
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+
+
+
 
 }
