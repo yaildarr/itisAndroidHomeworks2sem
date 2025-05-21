@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="cat"
+        android:id="@+id/mainFragment"
+        android:icon="@drawable/ic_home_24"
+        />
+    <item
+        android:title="converter"
+        android:id="@+id/converterFragment"
+        android:icon="@drawable/ic_money_24"
+        />
+
+    <item
+        android:title="graph"
+        android:id="@+id/chartFragment"
+        android:icon="@drawable/ic_chart_24"
+        />
+</menu>
+
