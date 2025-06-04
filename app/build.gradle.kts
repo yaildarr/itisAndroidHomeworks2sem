@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.plugin)
     alias(libs.plugins.compose.compiler)
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -56,6 +58,8 @@ dependencies {
 
 
     implementation(libs.hilt)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
     ksp(libs.hilt.compiler)
 
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -97,7 +101,16 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
 
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0")) // или новее
 
 
+
+    implementation("com.google.firebase:firebase-messaging")
+
+    implementation("com.google.firebase:firebase-analytics")
+
+    implementation("com.google.firebase:firebase-crashlytics")
+
+    implementation("com.google.firebase:firebase-config")
 
 }

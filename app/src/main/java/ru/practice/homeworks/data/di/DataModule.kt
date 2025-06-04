@@ -8,8 +8,10 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import ru.practice.homeworks.data.repository.CatDataRepositoryImpl
 import ru.practice.homeworks.data.repository.ConvertRepositoryImpl
+import ru.practice.homeworks.data.repository.PushRepositoryImpl
 import ru.practice.homeworks.domain.repository.CatDataRepository
 import ru.practice.homeworks.domain.repository.ConvertRepository
+import ru.practice.homeworks.domain.repository.PushRepository
 import javax.inject.Singleton
 
 
@@ -24,5 +26,9 @@ interface DataModule {
     @Binds
     @Singleton
     fun bindConvertRepositoryImpl(impl: ConvertRepositoryImpl) : ConvertRepository
+
+    @Binds
+    @Singleton
+    fun bindPushRepositoryImpl(impl : PushRepositoryImpl) : PushRepository
 
 }
