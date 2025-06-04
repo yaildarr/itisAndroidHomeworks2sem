@@ -1,4 +1,5 @@
 [versions]
+firebaseBom = "33.14.0"
 kspVersion = "4.16.0"
 minSdk = "24"
 targetSdk = "35"
@@ -35,6 +36,8 @@ navigationFragmentKtx = "2.8.9"
 navigationUiKtx = "2.8.9"
 
 hiltNavigationCompose = "1.2.0"
+navigationFragmentKtxVersion = "2.9.0"
+navigationUiKtxVersion = "2.9.0"
 
 
 
@@ -43,6 +46,8 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "kspVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -62,6 +67,8 @@ glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "gl
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtxVersion" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtxVersion" }
 
 
 
