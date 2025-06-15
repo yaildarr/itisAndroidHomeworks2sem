@@ -22,4 +22,6 @@
     <string name="cherez_zap">Введите значения через запятую</string>
     <string name="draw_graph">Отрисовать график</string>
     <string name="default_notification_channel_id">myChannel</string>
+    <string name="list_size">Список цветов должен совпадать с количеством секторов</string>
+    <string name="colors">соседние цвета не должны совпадать</string>
 </resources>

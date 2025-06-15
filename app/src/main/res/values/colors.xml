@@ -3,4 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="myPrimary">#FF841C</color>
+
+    <color name="sector_1">#483D8B</color>
+    <color name="sector_2">#6A5ACD</color>
+    <color name="sector_3">#4B0082</color>
+    <color name="sector_4">#800080</color>
+    <color name="sector_5">#8B008B</color>
 </resources>

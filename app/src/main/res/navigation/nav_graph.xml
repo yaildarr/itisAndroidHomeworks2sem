@@ -35,4 +35,8 @@
         android:id="@+id/chartFragment"
         android:name="ru.practice.homeworks.presentation.chart.ChartFragment"
         android:label="ChartFragment" />
+    <fragment
+        android:id="@+id/circleChartFragment"
+        android:name="ru.practice.homeworks.presentation.circleChart.CircleChartFragment"
+        android:label="CircleChartFragment" />
 </navigation>

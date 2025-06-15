@@ -17,5 +17,10 @@
         android:id="@+id/chartFragment"
         android:icon="@drawable/ic_chart_24"
         />
+    <item
+        android:title="chart"
+        android:id="@+id/circleChartFragment"
+        android:icon="@drawable/ic_pie_chart"
+        />
 </menu>
 
